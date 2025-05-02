@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <div class="card shadow">
+      <div class="card-header bg-primary text-white">
+        <h5 class="mb-0">Kampanya Oluştur</h5>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="campaignForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="title" class="form-label">Kampanya Başlığı:</label>
+            <input type="text" id="title" class="form-control" formControlName="title" />
+            @if (campaignForm.get('title')?.invalid && campaignForm.get('title')?.touched) {
+            <div class="text-danger mt-1">
+              Başlık zorunlu
+            </div>
+            }
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Kampanya Açıklaması:</label>
+            <textarea id="description" rows="4" class="form-control" formControlName="description"></textarea>
+            @if (campaignForm.get('description')?.invalid && campaignForm.get('description')?.touched) {
+            <div class="text-danger mt-1">
+              Açıklama zorunlu
+            </div>
+            }
+          </div>
+          <button type="submit" class="btn btn-success" [disabled]="campaignForm.invalid">Kaydet</button>
+          @if (showSuccessMessage) {
+          <div class="alert alert-success mt-3">
+            Kampanya başarılı bir şekilde eklenmiştir.
+          </div>
+          } 
+        </form>
+      </div>
+    </div>
+  </div>

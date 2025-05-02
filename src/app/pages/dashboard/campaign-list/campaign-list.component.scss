@@ -1,0 +1,12 @@
+.campaign-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .campaign-card {
+    background: #f2f2f2;
+    padding: 16px;
+    border-radius: 8px;
+    width: 300px;
+  }

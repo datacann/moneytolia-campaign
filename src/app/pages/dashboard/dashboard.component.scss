@@ -1,0 +1,10 @@
+.dashboard-container {
+    display: flex;
+    margin-top: 60px; // navbar yüksekliği kadar boşluk bırak
+
+  }
+  
+  .dashboard-content {
+    flex: 1;
+    padding: 20px;
+  }

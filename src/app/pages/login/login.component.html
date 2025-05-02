@@ -1,0 +1,21 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card p-4 shadow" style="width: 100%; max-width: 400px;">
+      <h3 class="text-center mb-4">Giriş Yap</h3>
+      <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="username" class="form-label">Kullanıcı Adı</label>
+          <input type="text" [(ngModel)]="username" name="username" class="form-control" id="username" required />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Şifre</label>
+          <input type="password" [(ngModel)]="password" name="password" class="form-control" id="password" required />
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Giriş</button>
+      </form>
+      @if (loginFailed) {
+        <div class="mt-3 text-danger text-center">
+        Giriş başarısız.
+      </div>
+      }
+    </div>
+  </div>

@@ -1,0 +1,28 @@
+<div class="container mt-4">
+    <div class="row g-4">
+      @for (campaign of campaigns(); track $index) {
+        <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">{{ campaign.title }}</h5>
+            <p class="card-text">{{ campaign.description }}</p>
+  
+            <div class="d-flex align-items-center mb-2">
+              <strong class="me-2">Puan:</strong>
+              <span class="mx-1">{{ campaign.score }}</span>
+              <button class="btn btn-outline-secondary btn-sm me-1" (click)="updateScore(campaign.id, -1)">-</button>
+              <button class="btn btn-outline-secondary btn-sm ms-1" (click)="updateScore(campaign.id, +1)">+</button>
+            </div>
+  
+            <p class="card-text"><strong>Tarih:</strong> {{ campaign.date }}</p>
+          </div>
+  
+          <div class="card-footer d-flex justify-content-between">
+            <button class="btn btn-primary btn-sm col-5" (click)="openUpdateModal(campaign)">Güncelle</button>
+            <button class="btn btn-danger btn-sm col-5" (click)="deleteCampaign(campaign.id)">Sil</button>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>

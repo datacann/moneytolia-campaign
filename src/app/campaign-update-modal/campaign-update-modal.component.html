@@ -1,0 +1,20 @@
+<h2 mat-dialog-title class="text-center">📋 Kampanya Güncelle</h2>
+
+<div mat-dialog-content>
+  <form class="update-form">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Başlık</mat-label>
+      <input matInput [(ngModel)]="data.title" name="title" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Açıklama</mat-label>
+      <textarea matInput [(ngModel)]="data.description" name="description" rows="3" required></textarea>
+    </mat-form-field>
+  </form>
+</div>
+
+<div class="modal-footer justify-content-end ">
+    <button class="btn btn-outline-danger me-2 col-3" (click)="onNoClick()">İptal</button>
+    <button class="btn btn-primary col-3" (click)="updateCampaign()">Güncelle</button>
+  </div>
