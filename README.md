@@ -2,6 +2,10 @@
 
 Bu proje, Angular 19 ile geliştirilmiş modern bir **kampanya yönetim uygulamasıdır**. Firebase üzerinde veri saklama, Angular Material ve Bootstrap ile kullanıcı arayüzü desteği, SCSS ile stil yönetimi ve Signal API ile reaktif state yönetimi içermektedir.
 
+## 🔗 Canlı Demo
+
+👉 [Uygulamayı Görüntüle](https://moneytolia-campaign-qpjp512oc-datacanns-projects.vercel.app/login)
+
 ## 🚀 Özellikler
 
 - ✅ Angular 19 ile geliştirilmiş
